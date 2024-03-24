@@ -1,5 +1,3 @@
-# phpCRUD
-dockerized php CRUD API
 # CRUD API with PHP and React Native
 
 This project consists of a CRUD (Create, Read, Update, Delete) API developed in PHP, deployed on Docker, and integrated with a React Native application. It allows for seamless interaction between the backend and frontend components, enabling data manipulation operations.
@@ -15,7 +13,7 @@ This project consists of a CRUD (Create, Read, Update, Delete) API developed in 
 docker-compose up -d
 ```
 
-5. Once the containers are running, you can access the API at [http://localhost:port](http://localhost:port), where `port` is the port specified in your Docker configuration.
+5. Once the containers are running, Docker will automatically create a MySQL database container. You can access the API at [http://localhost:8080](http://localhost:8080), where `8080` is the port configured for the PHP Apache server.
 
 ## API Endpoints
 
@@ -29,10 +27,10 @@ docker-compose up -d
 To interact with the API, you can use tools like Postman or curl commands. Here's an example of how to make a GET request to retrieve data:
 
 ```bash
-curl -X GET http://localhost:port/endpoint
+curl -X GET http://localhost:8080/endpoint
 ```
 
-Replace `/endpoint` with the desired endpoint and `port` with the port configured for your Docker containers.
+Replace `/endpoint` with the desired endpoint.
 
 ## Project Structure
 
@@ -42,7 +40,7 @@ Replace `/endpoint` with the desired endpoint and `port` with the port configure
 
 ## Contributors
 
-- [Your Name](https://github.com/yourusername)
+- [hgoncalv](https://github.com/hgoncalv)
 
 ## License
 
