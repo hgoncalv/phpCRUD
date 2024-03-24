@@ -1,6 +1,6 @@
-# CRUD API with PHP and React Native
+# CRUD API with PHP mySQL
 
-This project consists of a CRUD (Create, Read, Update, Delete) API developed in PHP, deployed on Docker, and integrated with a React Native application. It allows for seamless interaction between the backend and frontend components, enabling data manipulation operations.
+This project consists of a CRUD (Create, Read, Update, Delete) API developed in PHP and mySQL, deployed on Docker, to later be integrated with a React Native application. It allows for seamless interaction between the backend and frontend components, enabling data manipulation operations.
 
 ## Setup Instructions
 
