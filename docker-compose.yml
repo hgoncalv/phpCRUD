@@ -1,0 +1,28 @@
+services:
+  web:
+    image: php:7.4-apache
+    volumes:
+      - ./php:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql-db
+    networks:
+      - my-network
+    command: /bin/bash -c "docker-php-ext-install pdo pdo_mysql mysqli && a2enmod rewrite && apache2-foreground"
+
+  mysql-db:
+    image: mysql:latest
+    container_name: my-mysql-container
+    env_file: .env
+    ports:
+      - "3306:3306"
+    volumes:
+    #rename /mydbs to folder path were you want your db saved
+      - /mydbs:/var/lib/mysql
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
